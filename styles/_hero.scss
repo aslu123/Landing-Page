@@ -1,0 +1,109 @@
+
+
+:root {
+    --hero-height : 90vh;
+    @include respond-below(sm){
+        --hero-height : 100vh;
+    }
+}
+.hero{
+        background: linear-gradient(to bottom, rgba(26,71,137,1) 39%,rgba(109,187,217,1) 100%);
+        height: var(--hero-height);
+        overflow: hidden;
+        perspective: 100px;
+        transform-style: preserve-3d;
+    
+    &:after{
+                content: '';
+                height: 80px;
+                background-color: white ;
+                position: absolute;
+                bottom: -80px;
+                left: -5px;
+                right: -5px;
+                transform: rotateZ(357deg);
+                z-index: 11;
+                transform-origin: left center;
+                
+            }
+
+    .hero-inner{
+
+            position: relative;
+            height: var(--hero-height);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            @include respond-below(sm){
+                padding-top: 130px;
+            }
+           
+            &:after{
+            
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.2;
+                background-image: url(../images/round.svg),
+                                url(../images/round.svg),
+                                url(../images/round.svg);
+                background-position: right -45px,
+                                    50px    95%,
+                                    60%     98%;
+                background-size: 135px,80px,130px;                     
+                background-repeat: no-repeat;
+                z-index: 0;
+                
+                @include respond-above(xl){
+                    background-size: 195px 110px 195px;
+                }                                
+            }   
+        }
+    .hero-text-area{
+            
+            padding: 40px 0px;
+            position: relative;
+            z-index: 1;
+            @include respond-above(sm){
+
+                max-width: 400px;
+            }
+            @include respond-above(xl){
+                max-width: 700px;
+            }
+            *{
+                color: white;
+            }
+        }
+        .hero-img-area{
+            z-index: 1;
+            img{
+                max-width: 280px;
+                @include respond-above(sm){
+                max-width: 400px;
+                transform: translateX(250px);
+                
+                }
+                @include respond-above(xl){
+                    max-width: 615px;
+                    
+                }
+            }
+        }
+        .uk-flex{
+            @include respond-above(sm){
+                gap: 100px;
+            }
+            @include respond-above(xl){
+                gap: 144px;
+            }
+        }
+
+    }
+
+
+    
+

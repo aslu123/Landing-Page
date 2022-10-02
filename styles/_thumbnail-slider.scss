@@ -1,0 +1,103 @@
+.thumbnail-slider{
+    margin: 60px 0px 60px;
+    @include respond-above(sm){
+        margin: 100px 0 80px;
+    }
+    @include respond-above(xl){
+        margin: 140px 0 120px;
+    }
+    .corner-icon{
+        position: absolute;
+        top: -20px;
+        left: -22px;
+        
+    }
+    &-img{
+        @include respond-above(sm){
+            max-width: 400px;
+            
+        }
+        @include respond-above(xl){
+            max-width: 473px;
+
+        }
+        
+        flex :1.5;
+        
+    }
+    &-info{
+        flex: 2;
+        margin-left: 20px;
+        @include respond-above(xl){
+            margin-top: -45;
+        }
+        
+        @include respond-above(xl){
+            margin-left: 30px;
+        }
+        h3{
+            margin: 30px 0 12px;
+            @include respond-above(sm){
+                margin: 0 0 12px;
+            }
+        }
+        h5{
+            margin: 0 0 30px;
+            
+        }
+        p{
+            margin-bottom: 0;
+            height: 82px;
+            overflow: hidden;
+        }
+    }
+   
+    .uk-icon:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+        stroke: $secondary-color;
+        stroke-width: 3px;
+    }
+    .uk-icon{
+        top : 32%;
+        width: 45px;
+        height: 45px;
+        border: 3px solid $primary-color;
+        border-radius: 50px;
+        display: block;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color ease 0.3s ;
+        @include respond-above(sm){
+            top : 82%;
+        }
+        &:hover{
+            background-color: $primary-color;
+        }
+        @include respond-above(xl){
+        width: 57px;
+        height: 57px;
+        }
+        
+        svg{
+            width: 7px;
+        }
+    }
+    .uk-position-center-left {
+        left: 0;
+    @include respond-above(sm){
+        left: 41%;
+    }    
+        
+        
+    }
+    .uk-position-center-right {
+
+        right: 0;
+     @include respond-above(sm) {
+        right: 45%; 
+     }
+      
+        
+    }
+}

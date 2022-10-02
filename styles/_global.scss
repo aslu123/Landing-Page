@@ -1,0 +1,55 @@
+html{
+    font-family: $primary-font;
+    font-weight: $font-normal;
+    font-size: 14px;
+    line-height: 26px;
+}
+ul{
+
+@include reset-list()
+
+
+}
+a,a:hover{
+    text-decoration: none;
+}
+.uk-flex{
+    flex-direction: column;
+    // flex-wrap: wrap;
+    @include respond-above(sm){
+        flex-direction: row;
+    }
+    &.uk-flex-row{
+        flex-direction: row;
+    }
+}
+// cusom
+.uk-container{
+    &.uk-container-small{
+    max-width: 1000px;
+    
+}
+}
+.uk-flex-row-reverse{
+    @include respond-above(sm){
+    flex-direction: row-reverse;
+    }
+.uk-flex-bottom{
+    align-items: flex-end;
+}
+}
+.section-title{
+    max-width: 600px;
+    margin: 0 auto 50px;
+    @include respond-above(xl){
+    max-width: 735px;
+    margin: 0 auto 60px;
+    }
+
+
+    }
+    
+
+
+
+    

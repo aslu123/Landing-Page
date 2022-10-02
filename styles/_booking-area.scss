@@ -1,0 +1,12 @@
+.booking-area{
+    margin-top: 10px;
+    margin-bottom: 20px;
+     a{
+        img{
+            height: 28px;
+            @include respond-below(sm){
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

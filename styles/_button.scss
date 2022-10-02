@@ -1,0 +1,55 @@
+.primary-btn{
+    color: white;
+    font-size: 13px;
+    background: $secondary-color;
+    border-radius: 5px;
+    padding: 12px 25px;
+    transition: color ease 0.3s;
+    @include respond-above(sm){
+        padding: 10px 10px;
+    }
+        
+    
+    
+    @include respond-above(xl){
+        font-size: 15px;
+    
+    }
+    &:hover{
+        color: $primary-color !important;
+    }
+}
+.secondary-btn{
+
+    color: $primary-color-light;
+    font-size: 14px;
+    text-transform: capitalize;
+    position: relative;
+    transition: color ease 0.3s;
+    @include respond-above(xl){
+        font-size: 15px;
+    }
+    &:after{
+        content: '';
+        background: url(../images/icons/forward-arrow.svg) no-repeat center center;
+        position: absolute;
+        right: 0;
+        width: 25px;
+        height: 40px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transform: translateX(25px);
+        transition: transform ease 0.5s;
+    }
+    &:hover{
+        color: $secondary-color;
+        
+        &:after{
+            transform: translateX(29px);
+      }
+    }
+        
+
+} 
+

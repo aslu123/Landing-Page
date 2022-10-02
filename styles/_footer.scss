@@ -1,0 +1,107 @@
+footer{
+    @include respond-above(sm){
+        background:url(../images/footerbackground.svg)no-repeat center;
+
+    }
+    @include respond-above(xl){
+        background:url(../images/footerbackground.svg)no-repeat center;
+        
+    }
+   
+    @include respond-below(sm){
+        height: auto;
+        background-color: #031a3a;
+    }
+    .footer-table{
+        // flex: 1;
+        margin-top: 40px;
+        .uk-table{
+            th{
+                font-size: 13px;
+                color: #ffffff;
+            }
+            tr{
+                font-size: 12px;
+            }
+            td{
+                padding: 5px 12px;
+            }
+        } 
+    }
+    .footer-info{
+        flex: 1;
+        margin-top: 40px;
+        .primary-btn{
+            background-color:#1b498a;
+        }
+        h2{
+            font-size: 32px;
+            color: #ffffff;
+            font-weight: 700;
+            margin: 0 0 0 0;
+        }
+        p{
+            max-width: 347px;
+            font-size: 12px;
+            margin-top: 0;
+            color: #a9b2bc;
+        }
+        h5{
+            width: 239px;
+            height: 18px;
+            font-size: 13px;
+            color: #ffffff;
+            font-weight: bold;
+            margin-top: 0px;
+        }
+        .global-form {
+            .primary-btn {
+            width: 110px;
+            position: absolute;
+            left: 237px;
+            top: 5px;
+            margin-top: 0;
+            bottom: 5px;
+            text-transform: none;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            line-height: 15px;
+        }
+    }
+
+    .global-form input {
+    
+    height: 50px;
+    width: 350px;
+    border: 1px solid #ede5e9;
+    background-color: #faf9f7;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    }
+    }
+    .footer-line-text{
+        .footer-nav{
+            ul{
+                @include respond-above(sm){
+                    display: flex;
+                }
+                a{
+                    padding-right: 10px;
+                    color: #a9b2bc;
+                }
+            }
+        }
+        .footer-logo{
+            img{
+                height: 20px;
+            }
+        }
+        .footer-end{
+            p{
+                color: #a9b2bc;
+            }
+        }
+    }
+}
